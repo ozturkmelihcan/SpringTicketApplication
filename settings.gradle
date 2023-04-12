@@ -1,0 +1,6 @@
+rootProject.name = 'SpringTicketApplication'
+include 'TicketMicroService'
+include 'AuthMicroService'
+include 'UserMicroService'
+
+
