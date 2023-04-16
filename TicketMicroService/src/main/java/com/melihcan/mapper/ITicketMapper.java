@@ -1,11 +1,10 @@
 package com.melihcan.mapper;
 
-import com.melihcan.dto.request.CreateTicketRequestDto;
-import com.melihcan.dto.request.TicketSalesRequestDto;
-import com.melihcan.rabbitmq.model.BuyTicketModel;
+import com.melihcan.dto.request.TicketForUserRequestDto;
+import com.melihcan.rabbitmq.model.SaleTicketModel;
 import com.melihcan.repository.entity.Ticket;
+import com.melihcan.repository.entity.TicketForUser;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
@@ -14,8 +13,9 @@ public interface ITicketMapper {
 
     ITicketMapper INSTANCE = Mappers.getMapper(ITicketMapper.class);
 
-//    Ticket toTicket(final BuyTicketModel buyTicketModel);
+    Ticket toTicket(final SaleTicketModel saleTicketModel);
 
-//    @Mapping(source = "ticketid",target = "id")
-//    Ticket toTicket(final TicketSalesRequestDto dto);
+    TicketForUser toTicketForUser(final TicketForUserRequestDto ticketForUserRequestDto);
+
+
 }

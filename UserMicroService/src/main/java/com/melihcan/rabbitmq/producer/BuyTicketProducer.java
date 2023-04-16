@@ -12,6 +12,6 @@ public class BuyTicketProducer {
     private final RabbitTemplate rabbitTemplate;
 
     public void createSendMessage(BuyTicketModel buyTicketModel){
-        rabbitTemplate.convertAndSend("exchange-direct-ticket","key-ticket",buyTicketModel);
+        rabbitTemplate.convertAndSend("exchange-buy-ticket","key-buy-ticket",buyTicketModel);
     }
 }

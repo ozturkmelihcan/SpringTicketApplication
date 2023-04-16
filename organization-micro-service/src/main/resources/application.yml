@@ -1,0 +1,19 @@
+server:
+  port: 9095
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: user
+  data:
+    mongodb:
+      host: localhost
+      port: 29002
+      username: "ORG"
+      password: "orgmongo"
+      database: "organizationDB"
+
+jwt:
+  secretKey: ${PASSWORD}

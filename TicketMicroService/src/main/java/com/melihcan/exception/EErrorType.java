@@ -20,8 +20,10 @@ public enum EErrorType {
     INTERNAL_ERROR(3000,"Sunucuda beklenmeyen hata",INTERNAL_SERVER_ERROR),
     KULLANICI_BULUNAMADI(2301,"Aradığınız id ye ait kullanıcı bulunamamıştır",INTERNAL_SERVER_ERROR),
 
-    INVALID_TOKEN(4001,"GEÇERSİZ TOKEN BİLGİSİ",BAD_REQUEST);
+    INVALID_TOKEN(4001,"GEÇERSİZ TOKEN BİLGİSİ",BAD_REQUEST),
+    TICKET_NOT_FOUND(4002,"TICKET_NOT_FOUND",BAD_REQUEST),
 
+    ;
     private int code;
 
     private String message;

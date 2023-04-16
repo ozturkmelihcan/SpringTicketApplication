@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 @Builder
 @ToString
-public class CreateUserModel implements Serializable {
+public class CreateModel implements Serializable {
 
     Long authid;
 

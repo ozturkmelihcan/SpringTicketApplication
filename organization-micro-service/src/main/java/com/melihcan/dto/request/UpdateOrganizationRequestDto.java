@@ -5,19 +5,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-public class TicketSalesRequestDto {
+public class UpdateOrganizationRequestDto {
 
-    String ticketname;
+    String token;
 
-    Long ticketid;
+    String phone;
 
-    Long userid;
+    String email;
 
-    String time;
+    String name;
+
+    String lastName;
 }

@@ -12,8 +12,9 @@ public class BuyTicketConsumer {
 
     private final TicketService ticketService;
 
-    @RabbitListener(queues = "queue-ticket-buy")
-    public void buyTicketConsumerListener(BuyTicketModel buyTicketModel){
-        ticketService.createTicket(buyTicketModel);
+    @RabbitListener(queues = "queue-buy-ticket")
+    public void  buyTicketConsumerListener(BuyTicketModel buyTicketModel){
+        System.out.println(buyTicketModel);
+        ticketService.buyTicket(buyTicketModel);
     }
 }

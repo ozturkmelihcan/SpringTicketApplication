@@ -18,14 +18,19 @@ public class UserProfileController {
 
     private final UserProfileService userProfileService;
 
+
     @PostMapping("/updateuser")
     public ResponseEntity<Boolean>updateUser(@RequestBody UpdateUserRequestDto dto){
         return ResponseEntity.ok(userProfileService.updateDto(dto));
     }
 
+    // ticket alma metodları yazılacak.....
+
     @PostMapping("/buyticket")
     public ResponseEntity<Boolean>buyTicket(@RequestBody BuyTicketRequestDto buyTicketRequestDto){
         return ResponseEntity.ok(userProfileService.buyTicket(buyTicketRequestDto));
     }
+
+
 
 }

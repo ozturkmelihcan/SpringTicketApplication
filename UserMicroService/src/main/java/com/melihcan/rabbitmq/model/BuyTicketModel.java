@@ -13,7 +13,7 @@ public class BuyTicketModel implements Serializable {
 
     Long userid;
 
-    Integer koltukno;
+   Integer amount;
 
-    String time;
+   String title;
 }

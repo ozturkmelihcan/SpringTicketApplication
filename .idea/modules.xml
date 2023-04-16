@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AuthMicroService/SpringTicketApplication.AuthMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AuthMicroService/SpringTicketApplication.AuthMicroService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TicketMicroService/SpringTicketApplication.TicketMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/TicketMicroService/SpringTicketApplication.TicketMicroService.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UserMicroService/SpringTicketApplication.UserMicroService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UserMicroService/SpringTicketApplication.UserMicroService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/organization-micro-service/SpringTicketApplication.organization-micro-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/organization-micro-service/SpringTicketApplication.organization-micro-service.main.iml" />
     </modules>
   </component>
 </project>

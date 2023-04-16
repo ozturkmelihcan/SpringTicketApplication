@@ -11,12 +11,10 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @Data
 @Builder
-public class CreateTicketRequestDto {
+public class TicketForUserRequestDto {
 
-
-    Long userid;
-
-    String ticketname;
-
-    String time;
+    Integer amount;
+    Long ticketid;
+    String token;
+    Double price;
 }

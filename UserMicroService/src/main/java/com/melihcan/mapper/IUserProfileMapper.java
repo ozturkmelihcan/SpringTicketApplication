@@ -1,8 +1,9 @@
 package com.melihcan.mapper;
 
 import com.melihcan.dto.request.BuyTicketRequestDto;
+import com.melihcan.dto.request.UpdateUserRequestDto;
 import com.melihcan.rabbitmq.model.BuyTicketModel;
-import com.melihcan.rabbitmq.model.CreateUserModel;
+import com.melihcan.rabbitmq.model.CreateModel;
 import com.melihcan.repository.entity.UserProfile;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -13,7 +14,8 @@ public interface IUserProfileMapper {
 
     IUserProfileMapper INSTANCE = Mappers.getMapper(IUserProfileMapper.class);
 
-    UserProfile toUserProfile(final CreateUserModel createUserModel);
+    UserProfile toUserProfile(final CreateModel createModel);
 
-    BuyTicketModel toBuyTicketModel(final BuyTicketRequestDto buyTicketRequestDto);
+
+    UserProfile toUserProfile(final UpdateUserRequestDto updateUserRequestDto);
 }

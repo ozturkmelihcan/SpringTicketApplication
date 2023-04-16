@@ -14,8 +14,7 @@ import javax.persistence.Entity;
 public class BuyTicketRequestDto {
 
     String token;
+    Integer amount;
+    String title;
 
-    Integer koltukno;
-
-    String time;
 }

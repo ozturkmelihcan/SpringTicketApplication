@@ -1,7 +1,6 @@
 package com.melihcan.repository.entity;
 
 import com.melihcan.repository.enums.ERole;
-import com.melihcan.repository.enums.EStatus;
 import lombok.AllArgsConstructor;
 
 import lombok.Builder;
@@ -28,12 +27,10 @@ public class Auth extends BaseEntity{
 
     String email;
 
-    @Enumerated(EnumType.STRING)
-    @Builder.Default
-    ERole role = ERole.USER;
 
     @Enumerated(EnumType.STRING)
-    @Builder.Default
-    EStatus status = EStatus.PENDING;
+    ERole roles ;
+
+
 
 }

@@ -2,7 +2,6 @@ package com.melihcan.rabbitmq.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
 import java.io.Serializable;
 
 @AllArgsConstructor
@@ -10,7 +9,7 @@ import java.io.Serializable;
 @Data
 @Builder
 @ToString
-public class CreateUser implements Serializable {
+public class CreateModel implements Serializable {
 
     Long authid;
 

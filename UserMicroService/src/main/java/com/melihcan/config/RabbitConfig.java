@@ -11,47 +11,60 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
 
-    private String exchangeDirectTicket = "exchange-direct-ticket";
+    // EXCHANGE
     private String exchangeDirectAuth = "exchange-direct-auth";
 
-    private String keyTicket = "key-ticket";
+    private String exchangeDirectBuyTicket = "exchange-buy-ticket";
+    // KEY
 
     private String keyAuth = "key-auth";
 
-    private String queueTicketBuy = "queue-ticket-buy";
+    private String keyBuyTicket = "key-buy-ticket";
+
+    // QUEUE
 
     private String queueAuthCreateUser = "queue-auth-create-user";
 
+    private String queueBuyTicket = "queue-buy-ticket";
+
+
+
     // exchange
-    @Bean
-    DirectExchange directExchange(){
-        return new DirectExchange(exchangeDirectTicket);
-    }
 
     @Bean
     DirectExchange directExchangeAuth(){
         return new DirectExchange(exchangeDirectAuth);
     }
 
-    // kuyruk
     @Bean
-    Queue salesTicketUserQueue(){
-        return new Queue(queueTicketBuy);
+    DirectExchange directExchangeBuyTicket(){
+        return new DirectExchange(exchangeDirectBuyTicket);
     }
+
+    // kuyruk
 
     @Bean
     Queue createAuthUserQueue(){
         return new Queue(queueAuthCreateUser);
     }
 
-    // binding
+
     @Bean
-    public Binding bindingSalesTicketUser(final Queue salesTicketUserQueue , final DirectExchange directExchange){
-        return BindingBuilder.bind(salesTicketUserQueue).to(directExchange).with(keyTicket);
+    Queue buyTicketQueue(){
+        return new Queue(queueBuyTicket);
     }
+
+    // binding
+
 
     @Bean
     public Binding bindingCreateAuthUser(final Queue createAuthUserQueue,final DirectExchange directExchangeAuth){
         return BindingBuilder.bind(createAuthUserQueue).to(directExchangeAuth).with(keyAuth);
     }
+
+    @Bean
+    public Binding bindingBuyTicket(final Queue buyTicketQueue,final DirectExchange directExchangeBuyTicket){
+        return BindingBuilder.bind(buyTicketQueue).to(directExchangeBuyTicket).with(keyBuyTicket);
+    }
+
 }

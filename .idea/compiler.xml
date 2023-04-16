@@ -10,6 +10,7 @@
         </processorPath>
         <module name="SpringTicketApplication.UserMicroService.main" />
         <module name="SpringTicketApplication.AuthMicroService.main" />
+        <module name="SpringTicketApplication.organization-micro-service.main" />
         <module name="SpringTicketApplication.TicketMicroService.main" />
         <module name="SpringTicketApplication.main" />
       </profile>

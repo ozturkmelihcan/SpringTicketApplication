@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/AuthMicroService" />
             <option value="$PROJECT_DIR$/TicketMicroService" />
             <option value="$PROJECT_DIR$/UserMicroService" />
+            <option value="$PROJECT_DIR$/organization-micro-service" />
           </set>
         </option>
       </GradleProjectSettings>

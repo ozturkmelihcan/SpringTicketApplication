@@ -1,17 +1,17 @@
 package com.melihcan.rabbitmq.producer;
 
-import com.melihcan.rabbitmq.model.CreateUser;
+import com.melihcan.rabbitmq.model.SaleTicketModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class CreateUserProducer {
+public class SaleTicketProducer {
 
     private final RabbitTemplate rabbitTemplate;
 
-    public void createSendMessage(CreateUser createUser){
-        rabbitTemplate.convertAndSend("exchange-direct-auth","key-auth",createUser);
+    public void createSendMessage(SaleTicketModel saleTicketModel){
+        rabbitTemplate.convertAndSend("exchange-direct-sale-ticket","key-sale", saleTicketModel);
     }
 }

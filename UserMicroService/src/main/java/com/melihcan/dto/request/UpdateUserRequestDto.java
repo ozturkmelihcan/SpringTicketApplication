@@ -1,5 +1,6 @@
 package com.melihcan.dto.request;
 
+import com.melihcan.repository.entity.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
